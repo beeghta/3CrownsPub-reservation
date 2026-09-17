@@ -1,0 +1,214 @@
+﻿.reservation-section {
+    width: 100%;
+    padding: 70px 20px;
+    background: #eeeeee;
+}
+
+.reservation-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .reservation-header span {
+        display: block;
+        color: #b8944d;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .reservation-header h2 {
+        margin: 0;
+        color: #333;
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+        .reservation-header h2 strong {
+            color: #b8944d;
+            font-weight: 600;
+        }
+
+.reservation-divider {
+    width: 80px;
+    height: 1px;
+    background: #b8944d;
+    margin: 20px auto 0;
+}
+
+.reservation-box {
+    padding: 45px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72) ), url("/img/book_parallax.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reservation-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .reservation-title p {
+        color: white;
+        font-size: 28px;
+        margin: 0;
+    }
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.reservation-field {
+    display: flex;
+    flex-direction: column;
+}
+
+    .reservation-field label {
+        color: white;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .reservation-field input,
+    .reservation-field select {
+        width: 100%;
+        min-height: 48px;
+        padding: 10px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.95);
+        color: #333;
+        font-size: 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+        .reservation-field input:focus,
+        .reservation-field select:focus {
+            border-color: #b8944d;
+        }
+
+.reservation-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.reservation-submit,
+.reservation-cancel,
+.reservation-close-btn {
+    min-width: 160px;
+    padding: 13px 25px;
+    border: 1px solid #b8944d;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.reservation-submit,
+.reservation-close-btn {
+    background: #b8944d;
+    color: white;
+}
+
+    .reservation-submit:hover,
+    .reservation-close-btn:hover {
+        background: #9c7b3e;
+    }
+
+.reservation-cancel {
+    background: transparent;
+    color: white;
+}
+
+    .reservation-cancel:hover {
+        background: white;
+        color: #333;
+    }
+
+.reservation-confirmation {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background: white;
+    text-align: center;
+}
+
+.reservation-confirmation-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #b8944d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.reservation-confirmation h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.reservation-confirmation p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.reservation-confirmation strong {
+    color: #b8944d;
+}
+
+.reservation-note {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.reservation-close-btn {
+    margin-top: 25px;
+}
+
+@media (max-width: 767px) {
+
+    .reservation-section {
+        padding: 45px 15px;
+    }
+
+    .reservation-box {
+        padding: 30px 20px;
+    }
+
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .reservation-title p {
+        font-size: 23px;
+    }
+
+    .reservation-actions {
+        flex-direction: column;
+    }
+
+    .reservation-submit,
+    .reservation-cancel {
+        width: 100%;
+    }
+
+    .reservation-confirmation {
+        padding: 40px 20px;
+    }
+}

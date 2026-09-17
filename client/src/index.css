@@ -1,0 +1,209 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.reservation-section {
+    padding: 60px 8%;
+    background: #f7f7f7;
+}
+
+.reservation-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    .reservation-title span {
+        font-size: 28px;
+    }
+
+    .reservation-title p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+.reservation-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.reservation-form {
+    padding: 40px;
+    background-image: url("/book_parallax.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.reservation-status {
+    color: white;
+    font-size: 24px;
+}
+
+.reservation-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.reservation-field {
+    display: flex;
+    flex: 1;
+}
+
+    .reservation-field select {
+        width: 100%;
+        padding: 12px;
+    }
+
+.reservation-icon {
+    padding: 12px;
+    color: white;
+}
+
+.book-btn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 35px;
+    cursor: pointer;
+}
+
+.opening-hours {
+    padding: 40px;
+    background: #333;
+    color: white;
+}
+
+.opening-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.reservation-phone {
+    margin-top: 40px;
+}
+.table-selection {
+    padding: 60px 8%;
+    background: #f7f7f7;
+}
+
+.table-selection-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+    .table-selection-header span {
+        font-size: 28px;
+    }
+
+    .table-selection-header p {
+        margin-top: 8px;
+        color: #777;
+    }
+
+.cafe-floor-plan {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 550px;
+    margin: 0 auto;
+    background: #eee;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.floor-window {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.floor-bar {
+    position: absolute;
+    bottom: 8%;
+    left: 35%;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    background: #333;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.floor-door {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    padding: 10px 20px;
+    background: #ccc;
+    font-size: 12px;
+}
+
+.cafe-table {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 65px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .cafe-table strong {
+        font-size: 15px;
+    }
+
+    .cafe-table span {
+        font-size: 12px;
+    }
+
+    .cafe-table:hover {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .cafe-table.selected {
+        border-width: 4px;
+    }
+
+    .cafe-table.reserved {
+        opacity: 0.35;
+        cursor: not-allowed;
+    }
+
+.selected-table-info {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    border: 1px solid #ddd;
+}
+
+    .selected-table-info div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .selected-table-info span {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .selected-table-info strong {
+        font-size: 15px;
+    }
