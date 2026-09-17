@@ -52,3 +52,18 @@ export async function sendReservation(
 
     return data;
 }
+export async function getReservedTables(day, time) {
+    const response = await fetch(
+        `http://localhost:5000/api/reservations/occupied?day=${encodeURIComponent(day)}&time=${encodeURIComponent(time)}`
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(
+            data.message || "Failed to get reserved tables"
+        );
+    }
+
+    return data.reservedTables;
+}

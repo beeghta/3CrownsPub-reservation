@@ -2,7 +2,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home/Home";
-import ReservationSection from "./pages/ReservationSection";
+import ReservationSection from "./components/ReservationSection";
 
 function App() {
     const [showReservation, setShowReservation] = useState(false);

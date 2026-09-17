@@ -3,19 +3,20 @@
 function TableMap({
     selectedTable,
     onSelectTable,
-    guests
+    guests,
+    reservedTables
 }) {
     return (
         <section className="table-selection">
 
-            <div className="table-selection-header">
+            <div className="table-selection-header devider">
 
                 <span>
                     Choose your table
                 </span>
 
                 <p>
-                    Select a table based on its location and seating capacity.
+                    Find the table that’s perfect for you.
                 </p>
 
             </div>
@@ -42,7 +43,7 @@ function TableMap({
                         selectedTable?.id === table.id;
 
                     const isReserved =
-                        table.status === "reserved";
+                        reservedTables.includes(table.id);
 
                     const guestCount =
                         Number(guests);
@@ -60,10 +61,10 @@ function TableMap({
                             key={table.id}
                             type="button"
                             className={`
-                                cafe-table
-                                ${isSelected ? "selected" : ""}
-                                ${isReserved ? "reserved" : ""}
-                            `}
+                                    cafe-table
+                                    ${isSelected ? "selected" : ""}
+                                    ${isReserved || isWrongSize ? "reserved" : ""}
+                                `}
                             style={{
                                 left: `${table.x}%`,
                                 top: `${table.y}%`

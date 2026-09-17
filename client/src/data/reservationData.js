@@ -41,12 +41,12 @@ export const cafeTables = [
     },
     {
         id: "T03",
-        seats: 2,
+        seats: 8,
         x: 70,
         y: 18,
         location: "Near window",
         atmosphere: "Quiet",
-        status: "reserved"
+        status: "available"
     },
     {
         id: "T04",
@@ -73,7 +73,7 @@ export const cafeTables = [
         y: 48,
         location: "Near entrance",
         atmosphere: "Easy access",
-        status: "reserved"
+        status: "available"
     },
     {
         id: "T07",

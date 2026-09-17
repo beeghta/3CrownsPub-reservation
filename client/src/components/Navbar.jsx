@@ -8,56 +8,7 @@ function Navbar({ onReservationClick }) {
 
         if (!navbar) return;
 
-        // ==========================================
-        // HOVER
-        // ==========================================
-
-        const handleMouseEnter = () => {
-            navbar.classList.add("hover");
-
-            document.querySelectorAll(".st0").forEach((element) => {
-                element.classList.add("color");
-            });
-
-            document.querySelectorAll(".st1").forEach((element) => {
-                element.classList.add("color");
-            });
-
-            document.querySelectorAll(".st2").forEach((element) => {
-                element.classList.add("color");
-            });
-
-            document.querySelectorAll(".barcolor").forEach((element) => {
-                element.classList.add("active");
-            });
-        };
-
-        const handleMouseLeave = () => {
-            navbar.classList.remove("hover");
-
-            document.querySelectorAll(".st0").forEach((element) => {
-                element.classList.remove("color");
-            });
-
-            document.querySelectorAll(".st1").forEach((element) => {
-                element.classList.remove("color");
-            });
-
-            document.querySelectorAll(".st2").forEach((element) => {
-                element.classList.remove("color");
-            });
-
-            if (window.scrollY <= 20) {
-                document.querySelectorAll(".barcolor").forEach((element) => {
-                    element.classList.remove("active");
-                });
-            }
-        };
-
-        navbar.addEventListener("mouseenter", handleMouseEnter);
-        navbar.addEventListener("mouseleave", handleMouseLeave);
-
-
+        
         // ==========================================
         // SCROLL
         // ==========================================
@@ -184,8 +135,7 @@ function Navbar({ onReservationClick }) {
 
         return () => {
 
-            navbar.removeEventListener("mouseenter", handleMouseEnter);
-            navbar.removeEventListener("mouseleave", handleMouseLeave);
+    
 
             window.removeEventListener("scroll", handleScroll);
 
