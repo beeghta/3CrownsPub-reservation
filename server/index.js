@@ -6,7 +6,7 @@ const pool = require("./db");
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 
 app.use(cors());
@@ -247,16 +247,13 @@ app.post("/api/reservations", async (req, res) => {
    START SERVER
 ========================= */
 
+app.listen(
+    PORT,
+    () => {
 
-if (process.env.VERCEL !== "1") {
-    app.listen(
-        PORT,
-        () => {
-            console.log(
-                `3Crowns server is running on http://localhost:${PORT}`
-            );
-        }
-    );
-}
+        console.log(
+            `3Crowns server is running on http://localhost:${PORT}`
+        );
 
-module.exports = app;
+    }
+);
