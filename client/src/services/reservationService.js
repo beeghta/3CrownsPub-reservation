@@ -1,4 +1,6 @@
-﻿export function createReservationData(
+﻿const API_URL = import.meta.env.VITE_API_URL;
+
+export function createReservationData(
     reservation,
     selectedTable,
     customer
@@ -30,7 +32,7 @@ export async function sendReservation(
     reservationData
 ) {
     const response = await fetch(
-        "http://localhost:5000/api/reservations",
+        `${API_URL}/api/reservations`,
         {
             method: "POST",
 
@@ -52,9 +54,10 @@ export async function sendReservation(
 
     return data;
 }
+
 export async function getReservedTables(day, time) {
     const response = await fetch(
-        `http://localhost:5000/api/reservations/occupied?day=${encodeURIComponent(day)}&time=${encodeURIComponent(time)}`
+        `${API_URL}/api/reservations/occupied?day=${encodeURIComponent(day)}&time=${encodeURIComponent(time)}`
     );
 
     const data = await response.json();
