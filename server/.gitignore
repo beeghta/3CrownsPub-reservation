@@ -1,3 +1,4 @@
-node_modules/
+﻿node_modules/
 .env
+*.env
 JWT_SECRET = $2b$12$F9v8zNHt1Rituix2gHld2elL3G3lm7GkpsbEpQVz9xui3X5dLgkkO
